@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "USCitySlot",
+          "type": "AMAZON.US_CITY"
+        }
+      ],
+      "intent": "RestaurantByCityIntent"
+    }
+  ]
+}

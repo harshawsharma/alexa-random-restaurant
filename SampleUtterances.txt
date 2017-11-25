@@ -1,0 +1,4 @@
+RestaurantByCityIntent Pick a place for me in {USCitySlot}
+RestaurantByCityIntent Pick a restaurant in {USCitySlot}
+RestaurantByCityIntent Suggest a restaurant in {USCitySlot}
+

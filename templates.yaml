@@ -1,0 +1,2 @@
+random_restaurant: |
+  Here is an open restaurant that I randomly chose for you. Restaurant Name. {{random_business_name}}. This restaurant has a rating of {{random_business_rating}}, and is located at {{random_business_address}}.
