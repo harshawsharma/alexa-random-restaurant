@@ -1,6 +1,6 @@
 ## alexa-random-restaurant
 
-A python based backend for an Alexa skill that randomly gives you a restaurant in a specified city using the Yelp API.
+A basic python based backend for an Alexa skill that randomly gives you a restaurant in a specified city using the Yelp API.
 
 
 ### Pre-requisites
@@ -19,11 +19,12 @@ Once set up, this would work as follows:
 
 - When the following is asked 'Alexa, ask {skill name},  Pick a place for me in {city name}'
 - Alexa, invokes the Lamdba function using the ARN configured
-- The Lambda function is written in python using flask-ask. The function uses the lambda environment variables to communicate to yelp and obtain a list of restaurants for the city name provided. The call to yelp is configured to return only 10 open restaurants.- 
+- The Lambda function is written in python using flask-ask. The function uses the lambda environment variables to communicate to yelp and obtain a list of restaurants for the city name provided. The call to yelp is configured to return only 10 open restaurants.
 - The code then randomly picks one from the result set and returns a response back to Alexa to read out.
 
 
-### Additional Considerations
+### Additional Considerations/Limitations
 
 - Currently there is no validation of the city name provided
 - The yelp call is hardcoded to return only 10 results
+
