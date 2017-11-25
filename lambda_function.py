@@ -2,7 +2,7 @@ import logging
 
 from flask import Flask
 from flask_ask import Ask, question
-from yelp import search
+from api import search
 
 
 app = Flask(__name__)
