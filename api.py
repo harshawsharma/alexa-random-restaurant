@@ -21,6 +21,16 @@ GRANT_TYPE = 'client_credentials'
 
 SEARCH_LIMIT = 10
 
+def search(location):
+    bearer_token=obtain_bearer_token(API_HOST,TOKEN_PATH)
+    url_params = {
+        'location': location.replace(' ', '+'),
+        'limit': SEARCH_LIMIT,
+        'term': "restaurants",
+        'open_now': True
+    }
+    return request(API_HOST, SEARCH_PATH, bearer_token, url_params=url_params)
+
 
 def obtain_bearer_token(host, path):
     url = urljoin(host,path)
@@ -38,16 +48,6 @@ def obtain_bearer_token(host, path):
     response = requests.request('POST', url, data=data, headers=headers)
     bearer_token = response.json()['access_token']
     return bearer_token
-
-def search(location):
-    bearer_token=obtain_bearer_token(API_HOST,TOKEN_PATH)
-    url_params = {
-        'location': location.replace(' ', '+'),
-        'limit': SEARCH_LIMIT,
-        'term': "restaurants",
-        'open_now': True
-    }
-    return request(API_HOST, SEARCH_PATH, bearer_token, url_params=url_params)
 
 
 def request(host, path, bearer_token, url_params=None):

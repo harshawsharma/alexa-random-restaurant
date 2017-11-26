@@ -1,6 +1,6 @@
 ## alexa-random-restaurant
 
-A basic python based backend for an Alexa skill that randomly gives you a restaurant in a specified city using the Yelp API.
+A basic python based backend for an Alexa skill that randomly gives you an open restaurant in a specified city using the Yelp API.
 
 
 ### Pre-requisites
