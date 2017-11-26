@@ -3,7 +3,7 @@
 A basic python based backend for an Alexa skill that randomly gives you an open restaurant in a specified city using the Yelp API.
 
 
-### Pre-requisites
+### Prerequisites
 - This project uses the latest [flask-ask](https://github.com/johnwheeler/flask-ask) code that supports directly invoking AWS Lambda (as opposed to invoking via API Gateway+Lambda)
 - Create [Yelp App](https://www.yelp.com/developers/v3/manage_app). Client ID and Secret are required to make calls to Yelp
 
@@ -27,4 +27,5 @@ Once set up, this would work as follows:
 
 - Currently there is no validation of the city name provided
 - The yelp call is hardcoded to return only 10 results
+- Encrypt environment variables 
 
