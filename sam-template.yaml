@@ -3,10 +3,6 @@ Transform: 'AWS::Serverless-2016-10-31'
 
 
 Parameters:
-    BucketName:
-        Type: String
-    CodeKey:
-        Type: String
     YelpClientSecret:
         Type: String
     YelpClientID:
@@ -20,8 +16,8 @@ Resources:
       Handler: lambda_function.lambda_handler
       Runtime: python2.7
       CodeUri:
-        Bucket: !Ref BucketName
-        Key: !Ref CodeKey
+        Bucket: #Bucketname Goes Here#
+        Key: #Lambda deployment package name#
       Events:
         AlexaSkillEvent:
           Type: AlexaSkill
